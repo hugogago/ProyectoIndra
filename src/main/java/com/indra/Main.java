@@ -1,27 +1,24 @@
 package main.java.com.indra;
 
-import java.util.ArrayList;
+
 
 public class Main {
     public static void main(String[] args) {
-        Categoria reciclaje = new Categoria(1, "Taller");
-        Categoria energia = new Categoria(2, "Conferencia");
-        Categoria limpieza = new Categoria(3, "Limpieza");
-        Categoria compostaje = new Categoria(4, "Taller");
-        Categoria eficiencia = new Categoria(5, "Curso");
-        Categoria juvenil = new Categoria(6, "Foro");
-        Categoria transporte = new Categoria(7, "Transporte");
-
+        Categoria taller = new Categoria(1, "Taller");
+        Categoria conferencia = new Categoria(2, "Conferencia");
+        Categoria actividad = new Categoria(3, "Actividad");
+       
         
-
-        Ubicacion presencial = new Ubicacion(1, "presencial", "Centro Cultural, Madrid", "https://centroCultural.com");
-        Ubicacion online = new Ubicacion(2, "online", null, "https://evento-online.com");
-        
-
         Organizador org1 = new Organizador(1, "Luis Mariano", "693766543");
         Organizador org2 = new Organizador(2, "Juan García", "456238890");
 
-       
+        Ubicacion ubicacion1 = new Ubicacion(1, "presencial", "Centro Cultural EcoVida, Calle Verde 123, Madrid", "https://tallerdereciclaje.com");
+        Ubicacion ubicacion2 = new Ubicacion(2, "presencial", "Auditorio Verde, Avenida Solar 456, Madrid", "https://conferenciaenergias.com");
+        Ubicacion ubicacion3 = new Ubicacion(3, "presencial", "Parque Fluvial, Calle del Río 789, Madrid", "https://limpiezarios.com");
+        Ubicacion ubicacion4 = new Ubicacion(4, "presencial", "Jardín Comunitario, Calle Verde 321, Madrid", "https://tallercompostaje.com");
+        Ubicacion ubicacion5 = new Ubicacion(5, "presencial", "Centro de Formación Verde, Calle Eficiencia 654, Madrid", "https://cursoeficiencia.com");
+        Ubicacion ubicacion6 = new Ubicacion(6, "presencial", "Sala de Conferencias, Avenida del Clima 987, Madrid", "https://forojuvenil.com");
+        Ubicacion ubicacion7 = new Ubicacion(7, "presencial", "Varias ubicaciones en Madrid", "https://transporteSostenible.com")
 
         Evento evento1 = new Evento(1, "Taller de reciclaje", 2025-06-10, 3, " En este taller aprenderás técnicas prácticas para reciclar en casa y reducir residuos.", 1, 1, 2);
         Evento evento2 = new Evento(2, "Conferencia sobre energías renovables", 2025-07-05, 2, "Descubre las últimas innovaciones en energía verde y cómo pueden transformar nuestro futuro.", 2, 2, 1);
@@ -36,20 +33,7 @@ public class Main {
         Usuario usuario3 = new Usuario(3, "Alvaro Benito", "benitoAlvaro@gmail.com", "1234abcd");
         Usuario usuario4 = new Usuario(4, "Francisco López", "lopezFran@gmail.com", "abcd1234");
 
-       /*  System.out.println(usuario1);
-        System.out.println(usuario2);
-        System.out.println(usuario3);
-        System.out.println(usuario4); */
-        Inscripcion i1 = new Inscripcion();
-
-        
-
-
-        /*  inscripciones.add(i1);
-        inscripciones.add(i2);
-        inscripciones.add(i3);
-        inscripciones.add(i4); */
-
+    
         System.out.println("\n=== Eventos disponibles ===");
         System.out.println(evento1);
         System.out.println(evento2);
@@ -61,11 +45,7 @@ public class Main {
 
 
 
-        System.out.println("\n=== Inscripciones ===");
-        for (Inscripcion ins : inscripciones){
-            System.out.println(ins);
-        }
-
+        
 
     }
 }

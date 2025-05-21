@@ -6,27 +6,51 @@ public class Evento {
     private int fecha;
     private int duracion;
     private String descripcion;
-    private int id_categoria;
-    private int id_ubicacion;
-    private int id_organizador;
+    private Categoria categoria;
+    private Ubicacion ubicacion;
+    private Organizador organizador;
     
-    public Evento(int id_evento, String nombre, int fecha, int duracion, String descripcion, int id_categoria,
-            int id_ubicacion, int id_organizador) {
+    public Evento(int id_evento, String nombre, int fecha, int duracion, String descripcion, Categoria categoria,
+            Ubicacion ubicacion, Organizador organizador) {
         this.id_evento = id_evento;
         this.nombre = nombre;
         this.fecha = fecha;
         this.duracion = duracion;
         this.descripcion = descripcion;
-        this.id_categoria = id_categoria;
-        this.id_ubicacion = id_ubicacion;
-        this.id_organizador = id_organizador;
+        this.categoria = categoria;
+        this.ubicacion = ubicacion;
+        this.organizador = organizador;
     }
     
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public Ubicacion getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(Ubicacion ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public Organizador getOrganizador() {
+        return organizador;
+    }
+
+    public void setOrganizador(Organizador organizador) {
+        this.organizador = organizador;
+    }
+
     @Override
     public String toString() {
         return "Evento [id_evento=" + id_evento + ", nombre=" + nombre + ", fecha=" + fecha + ", duracion=" + duracion
-                + ", descripcion=" + descripcion + ", id_categoria=" + id_categoria + ", id_ubicacion=" + id_ubicacion
-                + ", id_organizador=" + id_organizador + "]";
+                + ", descripcion=" + descripcion + ", id_categoria=" + categoria + ", id_ubicacion=" + ubicacion
+                + ", id_organizador=" + organizador + "]";
     }
 
     public int getId_evento() {
@@ -59,24 +83,17 @@ public class Evento {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    public int getId_categoria() {
-        return id_categoria;
+
+    public String getResumen() {
+       return id_evento + ": " + nombre + " (" + fecha + ")";
     }
-    public void setId_categoria(int id_categoria) {
-        this.id_categoria = id_categoria;
+
+    public String getDetalle() {
+        return getResumen() + " | " + categoria.getNombre() + " | " +
+               ubicacion.getDireccion() + " | Organizado por: " +
+               organizador.getNombre();
     }
-    public int getId_ubicacion() {
-        return id_ubicacion;
-    }
-    public void setId_ubicacion(int id_ubicacion) {
-        this.id_ubicacion = id_ubicacion;
-    }
-    public int getId_organizador() {
-        return id_organizador;
-    }
-    public void setId_organizador(int id_organizador) {
-        this.id_organizador = id_organizador;
-    }
+   
 
 
     

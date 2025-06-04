@@ -1,5 +1,7 @@
 
 -- Base de datos: portal_eventos_sostenibles
+create database if not exists portal_eventos_sostenibles;
+use portal_eventos_sostenibles;
 
 CREATE TABLE Usuario (
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
